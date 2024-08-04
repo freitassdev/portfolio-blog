@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <nav className={`top-0 h-[4.5rem] px-16 flex flex-row items-center w-full border-b border-border/40 select-none sm:px-8 max-sm:px-4 ${toggleMenu ? 'bg-background' : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'}`}>
+        <nav className={`top-0 fixed h-[4.5rem] px-16 flex flex-row items-center w-full border-b border-border/40 select-none sm:px-8 max-sm:px-4 ${toggleMenu ? 'bg-background' : 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'}`}>
             <div className="nav-content flex flex-row items-center justify-between w-full">
                 <div className="flex flex-row gap-3">
                     <Image src={logoWhite} alt='Logo' className="w-10 h-10" />
