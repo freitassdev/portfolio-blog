@@ -25,7 +25,7 @@ export default function Home() {
                 <Button>Ver Artigos</Button>
               </div>
           </div>
-          <div className="flex flex-row items-center justify-center w-[50%]">
+          <div className="flex flex-row items-center justify-end w-[50%]">
             <Image
               src="/images/logo-white.png"
               alt="Hero"
