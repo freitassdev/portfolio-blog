@@ -10,7 +10,12 @@ import Image from 'next/image';
 import logoWhite from '@public/images/logo-white.png';
 import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 import { Badge } from "@/components/ui/badge"
-const Navbar: React.FC = () => {
+
+interface INavbarProps {
+    active: 'last-articles' | 'home'
+}
+
+function Navbar({ active }: INavbarProps) {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
@@ -28,16 +33,16 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-10">
                     <div className="nav-item">
-                        <a href="#" className="text-foreground/100 transition-colors hover:text-foreground/80 lg:block font-sans font-medium">Início</a>
+                        <a href="#" className={`${active === "home" ? "text-foreground/100" : "text-foreground/60"} text-lg transition-colors hover:text-foreground/80 lg:block font-sans font-medium`}>Início</a>
                     </div>
                     <div className="nav-item">
-                        <a href="#" className="text-foreground/60 transition-colors hover:text-foreground/80 lg:block font-sans font-medium">Últimos Artigos</a>
+                        <a href="#" className={`${active === "last-articles" ? "text-foreground/100" : "text-foreground/60"} text-lg transition-colors hover:text-foreground/80 lg:block font-sans font-medium`}>Últimos Artigos</a>
                     </div>
                     <TooltipProvider>
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <div className="nav-item">
-                                    <a href="#" className="text-foreground/60 transition-colors hover:text-foreground/80 lg:block font-sans font-medium">Inscrever-se</a>
+                                    <a href="#" className="text-lg text-foreground/60 transition-colors hover:text-foreground/80 lg:block font-sans font-medium">Inscrever-se</a>
                                 </div>
                             </TooltipTrigger>
                             <TooltipContent>
@@ -45,7 +50,7 @@ const Navbar: React.FC = () => {
                             </TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
-                    <Button>Visitar Portfólio</Button>
+                    <Button className='text-md'>Visitar Portfólio</Button>
 
                 </div>
                 <div className="flex flex-row items-center justify-center gap-4">

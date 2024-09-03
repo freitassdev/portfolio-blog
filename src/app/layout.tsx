@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="dark h-[100dvh] w-full bg-gradient-to-tr from-zinc-950 to-zinc-900 bg-no-repeat bg-fixed">
+      <body className="dark h-[100dvh] w-full bg-gradient-to-tl from-zinc-950 to-zinc-900 bg-no-repeat bg-fixed">
         {children}
       </body>
     </html>

@@ -5,13 +5,13 @@ import Image from "next/image";
 import abstractBg from "@public/images/abstract-bg.png";
 
 export default function Home() {
-
+  
   return (
     <>
       <div className={`absolute w-[900px] h-[900px] bg-no-repeat -z-10 blur-sm brightness-50 `} style={{
         backgroundImage: `url(${abstractBg.src})`,
       }}></div>
-      <Navbar />
+      <Navbar active="home"/>
       <div className="h-[100dvh]"> {/* All Content */}
         <div className="flex flex-row justify-between items-center h-full mx-24"> {/* Hero Section */}
           <div className="flex flex-col justify-center gap-4 w-[50%]">
