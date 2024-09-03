@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar/Navbar";
 import { useState } from "react";
 import Image from "next/image";
+import { Separator } from '@/components/ui/separator';
 function ArticlesPage() {
 
 
@@ -40,14 +41,17 @@ function ArticlesPage() {
                     <div className="flex flex-row gap-5 w-full">
                         <div className="grid grid-cols-2 gap-5">
                             {
-                                Array.from({ length: 40 }).map((_, _2) => {
+                                Array.from({ length: 10 }).map((_, _2) => {
                                     return (
-                                        <div key={_2} className="flex flex-col justify-end rounded-md h-[calc(20vh)] object-cover bg-cover p-5 gap-2">
-                                            <img src="https://media.istockphoto.com/id/1410455925/pt/vetorial/dynamic-blue-particle-wave-abstract-sound-visualization-digital-structure-of-the-wave-flow.jpg?s=612x612&w=0&k=20&c=Nm8ElSNJv8aSsBGoCFGE7nEdxwuVznP8gfMSUKGmoBg=" alt="Imagem representativa do Post" />
-                                            <div>
-                                                <h1 className="text-lg">Como criar rotas dinamicas utilizando next.js 14 e typescript.</h1>
-                                                <p className="text-sm">01/09/2024 - 69 min de leitura.</p>
+                                        <div key={_2} className="flex flex-col gap-2 w-full h-[200px]">
+                                            <div className="flex flex-row justify-end rounded-md h-[calc(20vh)] object-cover bg-cover gap-2 w-full py-3">
+                                                <img src="https://media.istockphoto.com/id/1410455925/pt/vetorial/dynamic-blue-particle-wave-abstract-sound-visualization-digital-structure-of-the-wave-flow.jpg?s=612x612&w=0&k=20&c=Nm8ElSNJv8aSsBGoCFGE7nEdxwuVznP8gfMSUKGmoBg=" alt="Imagem representativa do Post" className="h-full rounded-md aspect-video" />
+                                                <div className="flex flex-col justify-between">
+                                                    <h1 className="text-lg">Como criar rotas dinamicas utilizando next.js 14 e typescript.</h1>
+                                                    <p className="text-sm text-muted-foreground">01/09/2024 - 69 min de leitura.</p>
+                                                </div>
                                             </div>
+                                            <Separator />
                                         </div>
                                     )
                                 })
