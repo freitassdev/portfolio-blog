@@ -48,7 +48,11 @@ function ArticlesPage() {
                                                 <img src="https://media.istockphoto.com/id/1410455925/pt/vetorial/dynamic-blue-particle-wave-abstract-sound-visualization-digital-structure-of-the-wave-flow.jpg?s=612x612&w=0&k=20&c=Nm8ElSNJv8aSsBGoCFGE7nEdxwuVznP8gfMSUKGmoBg=" alt="Imagem representativa do Post" className="h-full rounded-md aspect-video" />
                                                 <div className="flex flex-col justify-between">
                                                     <h1 className="text-lg">Como criar rotas dinamicas utilizando next.js 14 e typescript.</h1>
-                                                    <p className="text-sm text-muted-foreground">01/09/2024 - 69 min de leitura.</p>
+                                                    <div className="flex flex-row gap-2 items-center ">
+                                                        <p className="text-sm text-muted-foreground whitespace-nowrap">Por Michel de Freitas</p>
+                                                        <Separator className="flex-1" />
+                                                        <p className="text-sm text-muted-foreground">01/09/2024</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <Separator />
